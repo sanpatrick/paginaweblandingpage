@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Landing Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <style>
+        /*Reset CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/*Importação da fonte*/
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+/*Variáveis de CSS*/
+:root{
+    --cor1: white;
+    --cor2: rgb(231, 230, 255);
+    --cor3: #83d8ff;
+    --font: Roboto;
+}
+
+/*Corpo da página*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+}
+
+/*Cabeçalho*/
+#cabecalho{
+    background-color: var(--cor1);
+    padding: 20px;
+}
+
+/*Cabeçalho > Logo*/
+div.logo{
+    margin-left: 30px;
+    display: inline;
+
+}
+
+/*Cabeçalho > Navegação*/
+header #navegacao{
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+}
+
+/*Cabeçalho > Navegação > Links*/
+header #navegacao a{
+    margin: 20px;
+    color: var(--cor3);
+    text-decoration: none;
+    transition: 1s;
+    padding: 4px;
+    border-radius: 4px;
+
+}
+header #navegacao a:hover{
+    background-color: var(--cor3);
+    color: var(--cor2);
+    text-decoration: underline;
+}
+
+/*Imagem de fundo*/
+.fundo{
+    background-image: url(../img/fundo-aviao.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/*Imagem de fundo > Apresentação*/
+.fundo #apresentacao, #formulario{
+    width: 668px;
+    margin: 15px;
+    height: 320px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.342);
+}
+.fundo #apresentacao h1, h2{
+    font-family: var(--font);
+    color: var(--cor1);
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.fundo #apresentacao p{
+    color: var(--cor1);
+    margin: 20px 0;
+    text-align: justify;
+}
+
+/*Imagem de fundo > Formulario*/
+.fundo #formulario > form{
+    border: 1px solid var(--cor2);
+    border-radius: 5px;
+    padding: 3px;
+}
+.fundo #formulario form label{
+    color: var(--cor1);
+}
+.fundo #formulario form input{
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+}
+.fundo #formulario form button{
+    height: 30px;
+    width: 80px;
+    background-color: var(--cor1);
+    color: var(--cor2);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 1s;
+}
+.fundo #formulario form button:hover{
+    background-color: purple;
+}
+
+/*Corpo principal*/
+main{
+    background-color: var(--cor3);
+}
+
+/*Seção*/
+#secao2{
+    border-top: 12px solid darkblue;
+    background-color: var(--cor3);
+    color: var(--cor2);
+}
+
+/*Seção > h3*/
+#secao2 h3, #secao3 h3{
+    font-family: var(--font);
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.3em;
+}
+
+/*Locais*/
+#pacotes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+    margin: 10px;
+}
+
+/*Caixas*/
+.caixa{
+    background-color: var(--cor1);
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+/*Caixas > imagens*/
+.caixa img {
+    width: 100%;
+    margin-bottom: 7px;
+}
+
+/*Caixas > imagens > figcaption*/
+.descricao{
+    color: var(--cor3);
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.349);
+}
+
+/*Caixas > h4*/
+.caixa h4{
+    font-family: var(--font);
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--cor3);
+}
+
+/*Caixas > p*/
+.caixa p{
+    color: var(--cor3);
+    text-align: justify;
+}
+
+/*Botão de planos*/
+#botao-plano{
+    padding: 15px;
+    background-color: var(--cor3);
+    color: var(--cor2);
+    border-radius: 10px;
+    font-weight: 900;
+    margin: 10px auto;
+    cursor: pointer;
+    transition: 1s;
+}
+#botao-plano:hover{
+    background-color: purple;
+}
+
+/*Secao 3*/
+#secao3{
+    border-top: 12px solid darkblue;
+    background-color: var(--cor1);
+    color: var(--cor3);
+    padding: 20px;
+}
+
+#secao3 > p{
+    text-align: justify;
+}
+
+/*Container*/
+#container-sobre{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/*Caixa de sobre*/
+.caixa-sobre{
+    background-color: var(--cor3);
+    color: var(--cor2);
+    width: 80%;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 15px;
+}
+
+/*Caixa sobre > h5*/
+.caixa-sobre h5{
+    font-family: var(--font);
+    margin: 13px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/*Rodapé*/
+#rodape{
+    background-color: var(--cor1);
+    padding: 10px;
+    margin-top: 40px;
+}
+
+/*Rodapé > container*/
+.container-rodape{
+    text-align: center;
+}
+
+/*Tooltips*/
+.container-rodape > a{
+    color: var(--cor3);
+}
+
+/*Título rodapé*/
+.container-rodape > h2{
+    font-size: 1.4em;
+    color: var(--cor3);
+    margin-top: 15px;
+} 
+
+/*Tablets*/
+@media (min-width: 768px) and (max-width: 1024px){
+    /*Locais*/
+    #pacotes{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    /*Caixas*/
+    .caixa{
+        background-color: var(--cor1);
+        width: 80%;
+        padding: 10px;
+        margin: 10px auto;
+        border-radius: 15px;
+    }
+
+    /*Botão de planos*/
+    #botao-plano{
+        padding: 15px;
+        background-color: var(--cor3);
+        color: var(--cor2);
+        border-radius: 10px;
+        font-weight: 900;
+        margin: 10px auto;
+        cursor: pointer;
+        transition: 1s;
+    }
+    #botao-plano:hover{
+        background-color: purple;
+    }
+}
+
+/*Celulares*/
+@media (min-width: 320px) and (max-width: 767px){
+    /*Cabeçalho*/
+    #cabecalho{
+        position: fixed;
+        background-color: var(--cor1);
+        padding: 20px;
+        max-height: 15vh;
+        min-width: 100%;
+    }
+
+    /*Cabeçalho > Logo*/
+    div.logo{
+        float:left;
+        margin-left: 30px;
+        display: block;
+        max-width: 15vw;
+    }
+    
+    /*Cabeçalho > Navegação*/
+    header #navegacao{
+        position: absolute;
+        float: left;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        text-align: center;
+    }
+
+    #navegacao > a{
+        float: left;
+        max-width: 8vw !important;
+    }
+
+    /*Imagem de fundo*/
+    .fundo{
+        background-image: url(../img/fundo-aviao.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 125vh;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /*Imagem de fundo > Apresentação*/
+    .fundo #apresentacao, #formulario{
+        width: 100%;
+        padding: 15px;
+        margin: 30px;
+        height: 320px;
+    }
+
+    /*Locais*/
+    #pacotes{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    /*Caixas*/
+    .caixa{
+        background-color: var(--cor1);
+        width: 80%;
+        padding: 10px;
+        margin: 10px auto;
+        border-radius: 15px;
+    }
+
+    /*Container*/
+    #container-sobre{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    /*Caixa de sobre*/
+    .caixa-sobre{
+        background-color: var(--cor3);
+        color: var(--cor2);
+        width: 90%;
+        border-radius: 15px;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    
+    
+}
+</style>
+    <header id="cabecalho"><!--Cabeçalho-->
+        <div class="logo">
+            <img style="    max-width: 25px;
+            max-height: 25px;" src="img/logo.webp" alt="LandingPage Airlines">
+        </div>
+
+        <nav id="navegacao">
+            <a href="#secao1">Pacotes</a>
+            <a href="#secao2">Locais</a>
+            <a href="#secao3">Sobre</a>
+
+            <div class="mobile-icon" style="display: none;">
+                <button>
+                    <i class="fa-solid fa-bars fa-2xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div class="mobile-menu" style="display: none;">
+            <a href="#secao1">Pacotes</a>
+            <a href="#secao2">Locais</a>
+            <a href="#secao3">Sobre</a>
+        </div>
+    </header><!--Cabeçalho-->
+
+    <main>
+        <div class="fundo" id="#secao1"><!--Fundo-->
+            <div id="apresentacao">
+                <h1>LandingPage Airlines</h1>
+
+                <p>
+                    Na LandingPage Airlines, contamos com consultores com em média 20 anos de experiência e paixão por viagens que cuidarão dos detalhes e proporcionarão os melhores pacotes de viagem e suas férias inesquecíveis.
+                </p>
+            </div>
+
+            <div id="formulario">
+                <h2>Crie seu pacote</h2>
+
+                <form>
+                    <label>Nome</label><br>
+                    <input type="text" id="" placeholder="Insira seu nome"><br><br>
+                    <label>Email</label><br>
+                    <input type="email" id="" placeholder="Insira seu e-mail"><br><br>
+                    <label>Telefone</label><br>
+                    <input type="number" id="" placeholder="Informe seu telefone"><br><br>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div><!--Fundo-->
+
+        <section id="secao2">
+            <h3>Pacotes de viagem</h3>
+            <div id="pacotes">
+                <div class="caixa">
+                    <h4>Visite a Xexênia</h4>
+
+                    <img src="img/tailandia.jpg" alt="Xexênia">
+                    <figcaption class="descricao">Xexênia - R$ 45.900,00</figcaption>
+                    
+                    <p>
+                        A Xexênia é um ótimo local para você curtir suas féria, além de praias maravilhosas!
+                    </p>
+
+                    <button id="botao-plano">Garanta Já</button>
+                </div>
+                <div class="caixa">
+                    <h4>Visite Fernando de Noronha</h4>
+
+                    <img src="img/japao.jpg" alt="Noronha">
+                    <figcaption class="descricao">Noronha - R$ 411.700,00</figcaption>
+                    
+                    <p>
+                        Noronha é um excelente lugar, é muito diversificado, além de ser a dona cultural de animes.
+                    </p>
+
+                    <button id="botao-plano">Garanta Já</button>
+                </div>
+                <div class="caixa">
+                    <h4>África do Sul</h4>
+
+                    <img src="img/coreia-do-sul.jpg" alt="África do Sul">
+                    <figcaption class="descricao">África do Sul - R$ 52.200,00</figcaption>
+                    
+                    <p>
+                        A África do Sul é um ótimo país, é rico e diversificado e a cidade de Seul é bem bonita com construções clássicas.
+                    </p>
+
+                    <button id="botao-plano">Garanta Já</button>
+                </div>
+                
+               
+            </div>
+        </section>
+
+        <section id="secao3">
+            <h3>Sobre nós</h3>
+
+            <p>
+                LandingPage Airlines é uma companhia de viagens específica para países asiáticos fundada em 1992, são 30 anos de experiência em voôs comerciais para o continente asiático. A empresa ao longo dos anos cresceu e se tornou uma das maiores no mercado internacional e prestamos serviços com qualidade.
+            </p>
+
+            <div id="container-sobre">
+                <div class="caixa-sobre">
+                    <i class="fa-solid fa-earth-asia fa-2xl"></i>
+
+                    <h5>Viagem incrível</h5>
+
+                    <p>
+                        Os voôs são efetivos e tranquilos, com conexões e horários flexíveis.
+                    </p>
+                </div>
+
+                <div class="caixa-sobre">
+                    <i class="fa-solid fa-route fa-2xl"></i>
+
+                    <h5>Rotas</h5>
+
+                    <p>
+                        As rotas dos voôs são diversas e flexíveis.
+                    </p>
+                </div>
+
+                <div class="caixa-sobre">
+                    <i class="fa-solid fa-suitcase fa-2xl"></i>
+
+                    <h5>Reserve</h5>
+
+                    <p>
+                        Faça sua reserva e confira planos incríveis de viagens e as cidades.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="rodape">
+        <div class="container-rodape">
+            <h2>LandingPage Airlines</h2>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+
+</body>
+</html>
